@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>VibeSphere WebXR – Trending Media Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div id="overlay">
+    <h1>VibeSphere WebXR</h1>
+    <p id="overlay-text">
+      A spatial hub for discovering trending media.<br />
+      Use your mouse to look around & click panels on desktop.<br />
+      On Meta Quest, use the <strong>Enter VR</strong> button or pinch to select.
+    </p>
+    <p id="overlay-error"></p>
+  </div>
+
+  <div id="ui">
+    <input
+      id="video-url"
+      type="text"
+      placeholder="Paste MP4 URL or leave empty for category video"
+    />
+    <button id="load-video">Load Video</button>
+    <button id="seek-back">« 10s</button>
+    <button id="play-pause">Play / Pause</button>
+    <button id="seek-forward">10s »</button>
+    <button id="unmute">Unmute</button>
+    <button id="vol-down">- Volume</button>
+    <button id="vol-up">+ Volume</button>
+
+    <span id="volume-label" style="color:white; margin-left:10px;">Vol: 100%</span>
+
+
+  </div>
+  
+  
+
+  <!-- VR button goes here -->
+  <div id="vr-button-container"></div>
+
+  <!-- Hidden video element used as texture -->
+  <video
+    id="vs-video"
+    playsinline
+    webkit-playsinline
+    muted
+    loop
+    style="display:none"
+  ></video>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
